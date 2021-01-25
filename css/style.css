@@ -57,7 +57,7 @@ p {
     display: inline;
     width: 60vw;
     max-width: 950px;
-    min-width: 410px;
+    min-width: 320px;
 }
 
 /*--------- Title ---------*/
@@ -149,13 +149,14 @@ footer {
     }
 
     .heading {
-        font-size: 1.7rem;
+        font-size: 1.188rem;
         margin-bottom: 20px;
     }
 
     .intro {
         text-align: center;
         max-width: 60vw;
+        font-size: 0.8;
     }
 
     .btn {
@@ -168,10 +169,10 @@ footer {
 
 }
 
-@media only screen and (min-width: 614px) and (max-width: 768px) {
+@media only screen and (min-width: 575px) and (max-width: 768px) {
 
     .heading {
-        font-size: 2.1rem;
+        font-size: 1.688rem;
         margin-bottom: 20px;
     }
 
@@ -195,7 +196,7 @@ footer {
 @media only screen and (min-width: 916px) and (max-width: 1206px) {
     
     .heading {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
         margin-bottom: 20px;
     }
 

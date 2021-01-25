@@ -2,15 +2,16 @@
 
 :root {
 
-    --Violet: hsl(257, 40%, 49%);
-    --Soft-Magenta: hsl(300, 69%, 71%);
+    --Violet: #674BAF;
+    --Soft-Magenta: #E882E8;
+
+    /*----- Background -----*/
+    --Bg-desktop: url("https://raw.githubusercontent.com/leon-bw/Huddle-Landing-Page-Introductory/d2a222549fe84163a6ec56ba08dbb4119d7cba36/images/bg-desktop.svg");
+
+    --Bg-mobile: url("https://raw.githubusercontent.com/leon-bw/Huddle-Landing-Page-Introductory/d2a222549fe84163a6ec56ba08dbb4119d7cba36/images/bg-mobile.svg");
 
 }
 
-/* 
-Heading: Poppins - 400, 600
-Body: Opens Sans - 400   
-*/
 
 * {
     margin: 0;
@@ -21,17 +22,181 @@ Body: Opens Sans - 400
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.875rem;
+    background-color: var(--Violet);
+    background-image: var(--Bg-desktop);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #fff;
 }
 
+h1 {
+    font-size: 2.75rem;
+    line-height: 1.5;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
 
+p {
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.container {
+    height: 100vh;
+    padding: 0 60px;
+}
+
+.logo{
+    margin: 30px auto;
+    height: 50px;
+}
+
+/*--------- Hero ---------*/
+.hero {
+    display: inline;
+    width: 60vw;
+    max-width: 950px;
+    min-width: 410px;
+}
+
+/*--------- Title ---------*/
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.intro {
+    margin: auto 50px;
+    max-width: 40vw;
+}
+
+.text, .btn {
+    margin: 10px auto;
+}
+
+.btn {
+    font-size: 1rem;
+    color:var(--Violet);
+    display: inline-block;
+    border-radius: 2rem;
+    border: none;
+    background-color: #fff;
+    width: 200px;
+    height: 3rem;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+
+.social-media {
+    text-align: right;
+    display: block;
+}
+
+i {
+    margin: 0 5px;
+    padding: 10px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+i:hover {
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+}
 
 /*--------- Footer ---------*/
-.attribution { 
+footer {
+    padding-top: 90px; 
     font-size: 11px; 
-    text-align: center; 
+    text-align: center;
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--Soft-Magenta);
+    text-decoration: none;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    
+    body {
+        background-image: var(--Bg-mobile);
+    }
+    
+    .container {
+        padding: 0 30px;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .hero {
+        margin-bottom: 50px;
+    }
+
+    .heading {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+    }
+
+    .intro {
+        text-align: center;
+        max-width: 60vw;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+
+    .social-media {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 614px) and (max-width: 768px) {
+
+    .heading {
+        font-size: 2.1rem;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 915px) {
+    
+    .heading {
+        font-size: 1.188rem;
+        margin-bottom: 20px;
+    }
+
+    .intro {
+        font-size: 0.688rem;
+        max-width: 60vw;
+    }
+
+}
+
+
+@media only screen and (min-width: 916px) and (max-width: 1206px) {
+    
+    .heading {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
 }
